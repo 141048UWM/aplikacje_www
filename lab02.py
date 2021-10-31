@@ -58,16 +58,40 @@ def funkcja4(cel, **opcje):
 funkcja4(20, ran="ran")
 
 class Calculator:
-
-    def add(a,b):
-        return a+b
-    def difference(a,b):
-        return a!=b
-    def multiply(a,b):
-        return a*b
-    def divide(a,b):
-        return a/b
+    def add(self, a,b):
+        dodaj = a+b
+        print(dodaj)
+    def multiply(self, a,b):
+        pomnoz = a*b
+        print(dodaj)
+    def odejmij(self, a,b):
+        odejmij_ = a-b
+        print(odejmij_)
+    def divide(self, a,b):
+        dziel = a/b
+        print(dziel)
 
 wynik = Calculator()
-wynik.add(3,4)
-print(wynik)
+wynik.add(3,5)
+
+class ScienceCalculator(Calculator):
+    def potega(self, a, b):
+        potega_ = a**b
+        print(potega_)
+
+
+wynik2 = ScienceCalculator()
+wynik2.potega(2,3)
+
+
+def Reverse(text):
+    temp = text
+    lista = []
+    for i in text:
+        lista.append(i)
+    print(lista)
+    lista.reverse()
+    for i in lista:
+        print(i.lower(), end="")
+
+Reverse("Koteł")
